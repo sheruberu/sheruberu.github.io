@@ -88,7 +88,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   Section headings — replaces the full-bleed teal bar with a page title
+   Section headings: replaces the full-bleed teal bar with a page title
    -------------------------------------------------------------------------- */
 
 /* The heading sits outside .container, so it needs the same 95% width and
@@ -161,7 +161,7 @@ main {
   background-color: transparent;
 }
 
-/* Hero buttons — shadcn button, default and outline variants */
+/* Hero buttons: shadcn button, default and outline variants */
 #intro .buttons a {
   display: inline-flex;
   align-items: center;
@@ -271,7 +271,7 @@ nav a.button-collapse i {
 }
 
 /* --------------------------------------------------------------------------
-   Cards — shadcn card: 1px border, lg radius, subtle shadow
+   Cards: shadcn card with a 1px border, lg radius and subtle shadow
    -------------------------------------------------------------------------- */
 
 .card {

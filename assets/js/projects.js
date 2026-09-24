@@ -77,14 +77,14 @@
     },
     {
       title: 'Personal Portfolio Site',
-      blurb: 'This website — static, no build step, deployed on GitHub Pages',
+      blurb: 'This website: static, no build step, deployed on GitHub Pages',
       image: '/assets/img/eat-sleep-code-repeat-wallpaper.jpg',
       alt: 'This personal portfolio website',
       tools: 'HTML5, CSS3, JavaScript, Materialize, GitHub Pages',
       period: 'Sep 2026',
       highlights: [
         'Built for ECE444 Software Engineering (PRA2, Front End Design).',
-        'Continuously deployed — every push to main republishes the site.'
+        'Continuously deployed: every push to main republishes the site.'
       ],
       links: [
         { href: 'https://sheruberu.github.io', icon: 'fa-external-link', label: 'View Online' },

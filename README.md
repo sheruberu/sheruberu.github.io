@@ -1,6 +1,6 @@
-# Shehryar Ur Rehman — Personal Portfolio
+# Shehryar Ur Rehman: Personal Portfolio
 
-A responsive single-page personal portfolio site, built for **ECE444: Software Engineering (Fall 2026)**, PRA2 — Front End Design.
+A responsive single-page personal portfolio site, built for **ECE444: Software Engineering (Fall 2026)**, PRA2 (Front End Design).
 
 **Live site:** https://sheruberu.github.io
 
@@ -29,10 +29,10 @@ styling, and added functionality beyond that starting point are my own work.
 
 ## Built With
 
-- [Materialize](https://materializecss.com/) — CSS framework (Google Material Design components)
-- [Typed.js](https://mattboldt.com/demos/typed-js/) — typing animation
-- [GitHub Pages](https://pages.github.com/) — static hosting
-- Vanilla HTML, CSS, and JavaScript — no build step
+- [Materialize](https://materializecss.com/): CSS framework (Google Material Design components)
+- [Typed.js](https://mattboldt.com/demos/typed-js/): typing animation
+- [GitHub Pages](https://pages.github.com/): static hosting
+- Vanilla HTML, CSS, and JavaScript, with no build step
 
 ## Development
 
@@ -43,8 +43,8 @@ git clone https://github.com/sheruberu/sheruberu.github.io.git
 cd sheruberu.github.io
 ```
 
-Deployment is automatic — pushing to `main` republishes via GitHub Pages.
+Deployment is automatic: pushing to `main` republishes via GitHub Pages.
 
 ## License
 
-MIT — see [LICENSE](./LICENSE). Original template © Varad Bhogayata.
+MIT. See [LICENSE](./LICENSE). Original template © Varad Bhogayata.
