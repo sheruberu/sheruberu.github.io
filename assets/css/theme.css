@@ -233,11 +233,18 @@ ul.side-nav.fixed li.logo {
   border-bottom: 1px solid hsl(var(--sidebar-border));
 }
 
-.profile-monogram {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
-  font-weight: 500;
-  letter-spacing: 0.05em;
+/* The source image is portrait (513x596), so cover-crop it to a circle
+   rather than letting it squash into a square box. */
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  max-width: 110px;
+  max-height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid hsl(var(--sidebar-border));
+  background-color: hsl(var(--muted));
 }
 
 /* Mobile top bar */

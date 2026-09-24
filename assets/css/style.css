@@ -684,21 +684,6 @@ small {
   }
 }
 
-/* Monogram avatar used in place of a profile photo */
-.profile-monogram {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background-color: #0f172a;
-  color: #ffffff;
-  font-size: 2.6rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  line-height: 1;
-}
 
 
 /* Skills rendered as text chips rather than logo images */
