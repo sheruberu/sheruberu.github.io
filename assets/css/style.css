@@ -708,3 +708,16 @@ small {
   letter-spacing: 2px;
   line-height: 1;
 }
+
+
+/* Skills rendered as text chips rather than logo images */
+.skill-chips {
+  margin-top: 12px;
+}
+
+.skill-chips .chip {
+  background-color: #e0f2f1;
+  color: #004d40;
+  margin: 0 6px 8px 0;
+  font-size: 0.95rem;
+}
