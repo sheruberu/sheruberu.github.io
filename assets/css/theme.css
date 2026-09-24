@@ -27,10 +27,13 @@
   --brand: 217.2 91.2% 59.8%;
   --brand-foreground: 210 40% 98%;
 
-  /* Sidebar surface */
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-border: 220 13% 91%;
+  /* Sidebar surface - deep slate, matching the hero so the page reads
+     dark / light / dark rather than a white rail against a white page */
+  --sidebar-background: 222.2 47.4% 11.2%;
+  --sidebar-foreground: 214 32% 85%;
+  --sidebar-accent: 217.2 32.6% 17.5%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 217.2 32.6% 20%;
 
   --radius: 0.5rem;
 
@@ -219,13 +222,13 @@ ul#slide-out li a {
 
 ul.side-nav.fixed a:hover,
 ul#slide-out li a:hover {
-  background-color: hsl(var(--muted));
-  color: hsl(var(--foreground));
+  background-color: hsl(var(--sidebar-accent));
+  color: hsl(var(--sidebar-accent-foreground));
 }
 
 ul.side-nav.fixed a.active {
-  background-color: hsl(var(--muted));
-  color: hsl(var(--foreground));
+  background-color: hsl(var(--sidebar-accent));
+  color: hsl(var(--sidebar-accent-foreground));
   font-weight: 600;
 }
 
@@ -249,13 +252,22 @@ ul.side-nav.fixed li.logo {
 
 /* Mobile top bar */
 nav.trigger {
-  background-color: hsl(var(--background));
-  border-bottom: 1px solid hsl(var(--border));
+  background-color: hsl(var(--sidebar-background));
+  border-bottom: 1px solid hsl(var(--sidebar-border));
 }
 
 nav .name-title #name {
-  color: hsl(var(--foreground));
+  color: hsl(var(--sidebar-accent-foreground));
   font-weight: 600;
+}
+
+nav .name-title span {
+  color: hsl(var(--sidebar-foreground));
+}
+
+nav a.button-collapse,
+nav a.button-collapse i {
+  color: hsl(var(--sidebar-foreground));
 }
 
 /* --------------------------------------------------------------------------
