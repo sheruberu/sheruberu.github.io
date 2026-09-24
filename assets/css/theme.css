@@ -435,3 +435,39 @@ nav a.button-collapse i {
     padding: 1.25rem;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   Places Travelled - responsive map embeds
+   -------------------------------------------------------------------------- */
+
+/* Percentage padding-bottom keeps a fixed aspect ratio while the card is
+   fluid, so the iframe never letterboxes or overflows its card. */
+.map-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 66%;
+  overflow: hidden;
+  background-color: hsl(var(--muted));
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+#places .card {
+  overflow: hidden;
+  height: calc(100% - 1.25rem);
+}
+
+#places .card-content p {
+  margin: 0.4rem 0 0;
+}
