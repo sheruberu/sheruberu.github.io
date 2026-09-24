@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <!-- Applies the saved theme before first paint, so there is no flash of
+       the wrong colours. Kept inline deliberately: an external file would be
+       an extra round trip, and the flash would happen while it loaded. -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = (stored === 'light' || stored === 'dark')
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.add(theme);
+      } catch (err) {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+
   <!-- Materialize - Compiled and minified CSS-->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
   <!-- Font Awesome Icon - CSS-->
@@ -121,6 +138,12 @@
         <a aria-label="Navigate to the Resume section" href="#resume"
         class="waves-effect waves-dark text-accent"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
       </li>
+      <li class="bold">
+        <button type="button" class="theme-toggle js-theme-toggle" aria-label="Switch colour theme">
+          <span class="theme-toggle-icons" aria-hidden="true"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="theme-toggle-label">Light</span>
+        </button>
+      </li>
     </ul>
   </nav>
 
@@ -170,6 +193,12 @@
       <li class="bold">
         <a aria-label="Navigate to the Resume section" href="#resume"
           class="waves-effect waves-dark text-accent"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+      </li>
+      <li class="bold">
+        <button type="button" class="theme-toggle js-theme-toggle" aria-label="Switch colour theme">
+          <span class="theme-toggle-icons" aria-hidden="true"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+          <span class="theme-toggle-label">Light</span>
+        </button>
       </li>
     </ul>
   </nav>
@@ -687,6 +716,9 @@
       })
     })
   </script>
+
+  <!-- Activity 6: light / dark theme switching -->
+  <script src="/assets/js/theme.js"></script>
 
   <!-- Activity 5: dynamic project rendering -->
   <script src="/assets/js/projects.js"></script>

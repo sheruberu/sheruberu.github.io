@@ -176,10 +176,12 @@ main {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
+/* The hero keeps its dark gradient in both themes, so these stay fixed
+   rather than following --background, which would go dark-on-dark. */
 #intro .buttons a.readme {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  border: 1px solid hsl(var(--background));
+  background-color: hsl(0 0% 100%);
+  color: hsl(222.2 47.4% 11.2%);
+  border: 1px solid hsl(0 0% 100%);
 }
 
 #intro .buttons a.readme:hover {
@@ -533,4 +535,141 @@ nav a.button-collapse i {
    hide the button. This restores that behaviour. */
 .btn-load-more[hidden] {
   display: none;
+}
+
+
+/* ==========================================================================
+   Activity 6 - dark theme
+   --------------------------------------------------------------------------
+   Token values taken from the .dark block of the shadcn/ui dashboard I build
+   at work. Because Activity 3 put every colour behind a token, dark mode is
+   a second token block: no component rule below needed changing.
+   ========================================================================== */
+
+html.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --border: 217.2 32.6% 17.5%;
+
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 240 3.7% 15.9%;
+}
+
+/* Materialize hardcodes the reveal panel to #FFF, which no token can reach. */
+.card .card-reveal {
+  background-color: hsl(var(--card));
+}
+
+/* --------------------------------------------------------------------------
+   Theme toggle
+   -------------------------------------------------------------------------- */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: calc(100% - 1rem);
+  margin: 0.125rem 0.5rem;
+  padding: 0.55rem 0.75rem;
+  background: transparent;
+  border: 0;
+  border-radius: calc(var(--radius) - 2px);
+  color: hsl(var(--sidebar-foreground));
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover {
+  background-color: hsl(var(--sidebar-accent));
+  color: hsl(var(--sidebar-accent-foreground));
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid hsl(var(--brand));
+  outline-offset: 2px;
+}
+
+/* Sun and moon share one box and cross-rotate, as in the dashboard's switch */
+.theme-toggle-icons {
+  position: relative;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle-icons svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+}
+
+.theme-toggle .icon-sun {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.theme-toggle .icon-moon {
+  transform: rotate(90deg) scale(0);
+  opacity: 0;
+}
+
+html.dark .theme-toggle .icon-sun {
+  transform: rotate(-90deg) scale(0);
+  opacity: 0;
+}
+
+html.dark .theme-toggle .icon-moon {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Cross-fade between themes
+   --------------------------------------------------------------------------
+   Applied by theme.js only for the duration of a switch, so the first paint
+   is never animated.
+   -------------------------------------------------------------------------- */
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease, fill 0.35s ease !important;
+}
+
+/* `transition` is a shorthand, so the rule above would otherwise wipe out the
+   icons' transform transition mid-switch. Higher specificity restores it. */
+html.theme-transition .theme-toggle-icons svg {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.theme-transition,
+  html.theme-transition *,
+  html.theme-transition *::before,
+  html.theme-transition *::after,
+  html.theme-transition .theme-toggle-icons svg,
+  .theme-toggle-icons svg {
+    transition: none !important;
+  }
 }
