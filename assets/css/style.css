@@ -85,7 +85,7 @@
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #00796b;
+  color: #0f172a;
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -97,7 +97,7 @@
 
 /* .readme:hover{
   color: white;
-  background-color: #00796b;
+  background-color: #0f172a;
 } */
 
 .contactme {
@@ -116,7 +116,7 @@
 }
 
 .contactme:hover{
-  color: #00796b;
+  color: #0f172a;
   background-color: white;
 }
 /* main body */
@@ -136,11 +136,11 @@ body {
 /* main a -- links */
 
 /* a {
-  color: #009688;
+  color: #3b82f6;
 } */
 
 a {
-  color: #004d40;
+  color: #3b82f6;
 }
 
 /* main blockqoute */
@@ -320,7 +320,7 @@ h3 {
 } */
 
 #intro.section {
-  background: #a7ffeb repeat;
+  background: #0f172a repeat;
   position: relative;
 }
 
@@ -473,7 +473,7 @@ a.hoverline {
 } */
 
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid #3b82f6 !important;
 }
 
 #skills .card.large {
@@ -548,9 +548,6 @@ small {
 
 /* main .teal-text */
 
-.teal-text {
-  color: #008073 !important;
-}
 
 /* .teal-text {
   color: #0b5e86 !important;
@@ -558,13 +555,7 @@ small {
 
 /* .teal */
 
-.teal {
-  background-color: #008073 !important;
-}
-
-/* .teal {
-  background-color: #00695c !important;
-} */
+ */
 
 @media (min-width: 1200px) {
   #experience .container {
@@ -602,7 +593,7 @@ small {
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+    color: #3b82f6;
     height: 56px;
     line-height: 56px;
   }
@@ -701,7 +692,7 @@ small {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background-color: #00796b;
+  background-color: #0f172a;
   color: #ffffff;
   font-size: 2.6rem;
   font-weight: 300;
@@ -716,8 +707,8 @@ small {
 }
 
 .skill-chips .chip {
-  background-color: #e0f2f1;
-  color: #004d40;
+  background-color: #f1f5f9;
+  color: #3b82f6;
   margin: 0 6px 8px 0;
   font-size: 0.95rem;
 }

@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
   <!-- Custom Styles-->
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- Design tokens and component overrides (loaded last, wins on source order) -->
+  <link rel="stylesheet" href="/assets/css/theme.css" />
   <title>Shehryar Ur Rehman | Applied AI Engineer</title>
 
   <!-- Open Graph-->
@@ -58,19 +60,19 @@
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark text-accent"><i
             class="mdi-social-person small"></i><span>About</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
+          class="waves-effect waves-dark text-accent"><i
             class="mdi-action-trending-up small"></i><span>Experience</span></a>
       </li>
 
       <li class="bold">
         <!-- mdi-av-web small
              mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark text-accent"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
       </li>
 
@@ -81,7 +83,7 @@
         mdi-social-poll
         mdi-av-equalizer
         -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark text-accent"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
       
@@ -89,7 +91,7 @@
         <!--
         ICONS:
         -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark text-accent"><i
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
 
@@ -99,7 +101,7 @@
         2. mdi-content-mail
         3. mdi-communication-email
         -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark text-accent"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
       </li>
 
@@ -113,7 +115,7 @@
         5. mdi-file-folder-shared
         -->
         <a aria-label="Navigate to the Resume section" href="#resume"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
+        class="waves-effect waves-dark text-accent"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
       </li>
     </ul>
   </nav>
@@ -123,8 +125,8 @@
     <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
       class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Shehryar Ur
-        Rehman</a><span class="black-text">Applied AI Engineer</span>
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="text-accent">Shehryar Ur
+        Rehman</a><span class="text-fg">Applied AI Engineer</span>
     </div>
   </nav>
 
@@ -132,34 +134,34 @@
   <nav class="hide-on-large only">
     <ul id="slide-out" class="side-nav">
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark text-accent"><i
             class="mdi-social-person small"></i><span>About</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
+          class="waves-effect waves-dark text-accent"><i
             class="mdi-action-trending-up small"></i><span>Experience</span></a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark text-accent"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark text-accent"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark text-accent"><i
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark text-accent"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Resume section" href="#resume"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
+          class="waves-effect waves-dark text-accent"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
       </li>
     </ul>
   </nav>
@@ -173,9 +175,8 @@
         <div class="col-md-9">
           <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
             <div class="caption">
-              <h2>Hi, I'm <span class="teal">Shehryar Ur Rehman.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
+              <h2>Hi, I'm <span class="hl">Shehryar Ur Rehman.</span></h2>
+              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#3b82f6"></span></h5>
               <h5>Electrical &amp; Computer Engineering student at the University of Toronto, building production AI systems and the full-stack platforms around them.</h5>
             </div>
             <div class="social">
@@ -203,7 +204,7 @@
 
     <!-- Second Section: About -->
     <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
+      <h3 class="page-title">About</h3>
       <div class="container flow-text">
         <!-- <blockquote>
           <h2>
@@ -250,16 +251,16 @@
 
     <!-- Third Section: Experience -->
     <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
+      <h3 class="page-title">Experience</h3>
       <div class="container">
 
         <div class="card">
           <div class="card-content">
             <p>
               <span class="card-title"><a href="https://www.valsoftcorp.com/" target="_blank" rel="noopener"
-                  class="teal-text hoverline">Valsoft Corporation</a></span>
+                  class="text-accent hoverline">Valsoft Corporation</a></span>
             </p>
-            <div class="role brown-text text-darken-2">Applied AI Engineer</div>
+            <div class="role">Applied AI Engineer</div>
             <ul>
               <li>
                 Sole owner and engineer of the M&amp;A team's deal-sourcing software &mdash; designed,
@@ -305,9 +306,9 @@
           <div class="card-content">
             <p>
               <span class="card-title"><a href="https://www.cnergyico.com/" target="_blank" rel="noopener"
-                  class="teal-text hoverline">Cnergyico PK</a></span>
+                  class="text-accent hoverline">Cnergyico PK</a></span>
             </p>
-            <div class="role brown-text text-darken-2">Data Science Intern</div>
+            <div class="role">Data Science Intern</div>
             <ul>
               <li>
                 Built a Prophet + LSTM time-series model forecasting departmental OPEX/CAPEX 12 months out
@@ -334,7 +335,7 @@
 
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
+      <h3 class="page-title">Projects</h3>
       <div class="container">
         <div class="row">
 
@@ -345,12 +346,12 @@
                   src="/assets/img/futuristic-wallpaper.jpg" style="height: 100%; width: 100%" class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Simon Says / Whack-a-Mole<i
+                <span class="card-title activator text-accent hoverline">Simon Says / Whack-a-Mole<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>Bare-metal embedded reaction game on an STM32F446</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>Simon Says / Whack-a-Mole</small><i
+                <span class="card-title text-muted"><small>Simon Says / Whack-a-Mole</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> C, STM32F446, SDIO-DMA, I&sup2;S, PWM</li>
@@ -373,12 +374,12 @@
                   class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">CodeBreaker Blitz<i
+                <span class="card-title activator text-accent hoverline">CodeBreaker Blitz<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>Interactive code-breaking game on the DE1-SoC</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>CodeBreaker Blitz</small><i
+                <span class="card-title text-muted"><small>CodeBreaker Blitz</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> C, ARM assembly, DE1-SoC, Cyclone V FPGA</li>
@@ -398,12 +399,12 @@
                   src="/assets/img/minimal-ai-wallpaper.jpg" style="height: 100%; width: 100%" class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">SDR PCB Subsystem<i
+                <span class="card-title activator text-accent hoverline">SDR PCB Subsystem<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>Four-layer RF mixer front-end board in Altium</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>SDR PCB Subsystem</small><i
+                <span class="card-title text-muted"><small>SDR PCB Subsystem</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> Altium Designer, schematic capture, DRC</li>
@@ -423,12 +424,12 @@
                   style="height: 100%; width: 100%" class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">MoonLanders<i
+                <span class="card-title activator text-accent hoverline">MoonLanders<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>Verilog FPGA game synthesized at 50 MHz</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>MoonLanders</small><i
+                <span class="card-title text-muted"><small>MoonLanders</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> Verilog, Quartus Prime, Cyclone V FPGA</li>
@@ -448,12 +449,12 @@
                   style="height: 100%; width: 100%" class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Personal Portfolio Site<i
+                <span class="card-title activator text-accent hoverline">Personal Portfolio Site<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>This website &mdash; static, no build step, deployed on GitHub Pages</p>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text"><small>Personal Portfolio Site</small><i
+                <span class="card-title text-muted"><small>Personal Portfolio Site</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> HTML5, CSS3, JavaScript, Materialize, GitHub Pages</li>
@@ -464,12 +465,12 @@
                 <div class="card-action">
                   <a aria-label="View this site" href="https://sheruberu.github.io" target="_blank" rel="noopener"
                     data-position="top" data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="btn-floating btn-large waves-effect waves-light tooltipped"><i
                       class="fa fa-external-link"></i></a>
                   <a aria-label="View the GitHub repo for this site"
                     href="https://github.com/sheruberu/sheruberu.github.io" target="_blank" rel="noopener"
                     data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="btn-floating btn-large waves-effect waves-light tooltipped"><i
                       class="fa fa-github"></i></a>
                 </div>
               </div>
@@ -482,11 +483,11 @@
 
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
+      <h3 class="page-title">Skills</h3>
       <div class="container">
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Languages</h4>
+            <h4 class="card-heading">Languages</h4>
             <div class="skill-chips">
               <span class="chip">Python</span>
               <span class="chip">C</span>
@@ -502,7 +503,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">AI &amp; Machine Learning</h4>
+            <h4 class="card-heading">AI &amp; Machine Learning</h4>
             <div class="skill-chips">
               <span class="chip">LLM Pipelines</span>
               <span class="chip">OpenAI</span>
@@ -520,7 +521,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Full-Stack &amp; Cloud</h4>
+            <h4 class="card-heading">Full-Stack &amp; Cloud</h4>
             <div class="skill-chips">
               <span class="chip">Node.js</span>
               <span class="chip">Express</span>
@@ -540,7 +541,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Embedded &amp; Hardware</h4>
+            <h4 class="card-heading">Embedded &amp; Hardware</h4>
             <div class="skill-chips">
               <span class="chip">STM32</span>
               <span class="chip">ARM Cortex-A9</span>
@@ -554,7 +555,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Tools</h4>
+            <h4 class="card-heading">Tools</h4>
             <div class="skill-chips">
               <span class="chip">Git</span>
               <span class="chip">Linux</span>
@@ -570,7 +571,7 @@
 
     <!-- Seventh Section: Education -->
     <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education</h3>
+      <h3 class="page-title">Education</h3>
       <div class="container">
         <div class="row">
           <div class="col s12 m6 l6">
@@ -578,9 +579,9 @@
               <div class="card-content">
                 <p>
                   <span class="card-title"><a href="https://www.ece.utoronto.ca/" target="_blank" rel="noopener"
-                      class="teal-text hoverline">University of Toronto</a></span>
+                      class="text-accent hoverline">University of Toronto</a></span>
                 </p>
-                <p class="brown-text">Toronto, Canada</p>
+                <p class="text-muted">Toronto, Canada</p>
                 <p>
                   <b>Degree: </b>BASc, Electrical &amp; Computer Engineering
                   <br>
@@ -609,9 +610,9 @@
               <div class="card-content">
                 <p>
                   <span class="card-title"><a href="https://www.kgs.edu.pk/" target="_blank" rel="noopener"
-                      class="teal-text hoverline">Karachi Grammar School</a></span>
+                      class="text-accent hoverline">Karachi Grammar School</a></span>
                 </p>
-                <p class="brown-text">Karachi, Pakistan</p>
+                <p class="text-muted">Karachi, Pakistan</p>
                 <p>
                   <b>Programme: </b>A Levels
                 </p>
@@ -634,7 +635,7 @@
 
     <!-- Eight Section: Contact -->
     <section id="contact" class="section scrollspy">
-      <h3 class="page-title white-text teal">Contact</h3>
+      <h3 class="page-title">Contact</h3>
       <div class="container">
         <p class="flow-text">
           The best way to reach me is on LinkedIn. I keep my email and phone number off this site
@@ -643,14 +644,14 @@
         <p>
           <a aria-label="View Shehryar on LinkedIn" href="https://www.linkedin.com/in/shehryar-ur-rehman-a8898534a" target="_blank" rel="noopener"
             data-position="top" data-tooltip="View Shehryar on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+            class="btn-floating btn-large waves-effect waves-light tooltipped"><i
               class="fa fa-linkedin"></i></a>
           <a href="https://www.linkedin.com/in/shehryar-ur-rehman-a8898534a" target="_blank" rel="noopener" class="hoverline">linkedin.com/in/shehryar-ur-rehman</a>
         </p>
         <p>
           <a aria-label="View Shehryar on GitHub" href="https://github.com/sheruberu" target="_blank" rel="noopener"
             data-position="top" data-tooltip="View Shehryar on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+            class="btn-floating btn-large waves-effect waves-light tooltipped"><i
               class="fa fa-github"></i></a>
           <a href="https://github.com/sheruberu" target="_blank" rel="noopener" class="hoverline">github.com/sheruberu</a>
         </p>
@@ -659,12 +660,12 @@
 
     <!-- Resume -->
     <section id="resume" class="section scrollspy">
-      <h3 class="page-title white-text teal">Resume</h3>
+      <h3 class="page-title">Resume</h3>
       <div class="container">
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Profile</h4>
+            <h4 class="card-heading">Profile</h4>
             <p class="flow-text">
               Electrical &amp; Computer Engineering student (AI minor) and Applied AI Engineer with a year
               of production experience owning AI systems end to end &mdash; LLM pipelines, full-stack
@@ -675,7 +676,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Education</h4>
+            <h4 class="card-heading">Education</h4>
             <ul>
               <li><b>University of Toronto</b> &mdash; BASc, Electrical &amp; Computer Engineering,
                 minor in Artificial Intelligence. Expected April 2027.</li>
@@ -686,7 +687,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Experience</h4>
+            <h4 class="card-heading">Experience</h4>
             <ul>
               <li><b>Applied AI Engineer</b>, Valsoft Corporation &mdash; Sep 2025 to Aug 2026.
                 Sole owner and engineer of the M&amp;A team's deal-sourcing software, shipped across
@@ -699,7 +700,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Selected Projects</h4>
+            <h4 class="card-heading">Selected Projects</h4>
             <ul>
               <li>Simon Says / Whack-a-Mole &mdash; bare-metal STM32F446 game in C.</li>
               <li>CodeBreaker Blitz &mdash; DE1-SoC game in C and ARM assembly.</li>
@@ -711,7 +712,7 @@
 
         <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Core Skills</h4>
+            <h4 class="card-heading">Core Skills</h4>
             <p>
               Python, C, C++, JavaScript / TypeScript, SQL, Verilog, ARM assembly &middot;
               LLM pipelines, prompt engineering, embeddings, PyTorch &middot;
@@ -721,7 +722,7 @@
           </div>
         </div>
 
-        <p class="flow-text grey-text text-darken-1">
+        <p class="flow-text">
           A full PDF resume is available on request. It is intentionally not published here, because it
           carries contact details I would rather keep off a public repository.
         </p>

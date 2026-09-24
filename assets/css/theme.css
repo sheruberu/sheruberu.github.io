@@ -1,0 +1,418 @@
+/* ==========================================================================
+   Design tokens and component overrides
+   --------------------------------------------------------------------------
+   Ported from the shadcn/ui design system used by the admin dashboard I build
+   at work: HSL custom properties, a neutral slate palette, 1px borders instead
+   of heavy shadows, and a 0.5rem radius scale.
+
+   Loaded AFTER materialize.min.css and style.css so it wins on source order
+   without needing !important or inflated selectors.
+   ========================================================================== */
+
+:root {
+  /* Neutral slate palette (shadcn/ui defaults) */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --border: 214.3 31.8% 91.4%;
+
+  /* Single chromatic accent, taken from the dashboard's focus-ring colour */
+  --brand: 217.2 91.2% 59.8%;
+  --brand-foreground: 210 40% 98%;
+
+  /* Sidebar surface */
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-border: 220 13% 91%;
+
+  --radius: 0.5rem;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+a {
+  color: hsl(var(--brand));
+}
+
+a:hover {
+  color: hsl(var(--brand) / 0.8);
+}
+
+.text-accent {
+  color: hsl(var(--brand));
+}
+
+.text-muted {
+  color: hsl(var(--muted-foreground));
+}
+
+.text-fg {
+  color: hsl(var(--foreground));
+}
+
+.flow-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+}
+
+/* --------------------------------------------------------------------------
+   Section headings — replaces the full-bleed teal bar with a page title
+   -------------------------------------------------------------------------- */
+
+/* The heading sits outside .container, so it needs the same 95% width and
+   auto margins to line up with the content below it. */
+.page-title {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  width: 95%;
+  margin: 0 auto 1.75rem;
+  padding: 0 0 0.75rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+/* Replace the repeating texture bitmap with a flat surface */
+main {
+  background: hsl(var(--background));
+}
+
+.section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+#intro.section {
+  background: linear-gradient(
+    160deg,
+    hsl(222.2 47.4% 11.2%) 0%,
+    hsl(222.2 40% 16%) 55%,
+    hsl(217 33% 22%) 100%
+  );
+}
+
+#intro.section .container {
+  color: hsl(var(--primary-foreground));
+}
+
+#intro.section .container *:not(span) {
+  text-shadow: none;
+  font-weight: 400;
+}
+
+#intro.section h2 {
+  color: hsl(var(--primary-foreground));
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+#intro.section h5 {
+  color: hsl(210 40% 80%);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  max-width: 44rem;
+}
+
+#intro.section .hl {
+  color: hsl(var(--brand));
+  padding: 0;
+}
+
+.overlay {
+  background-color: transparent;
+}
+
+/* Hero buttons — shadcn button, default and outline variants */
+#intro .buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding: 0 1.25rem;
+  margin-right: 0.75rem;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+#intro .buttons a.readme {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--background));
+}
+
+#intro .buttons a.readme:hover {
+  background-color: hsl(0 0% 100% / 0.9);
+}
+
+#intro .buttons a.contactme {
+  background-color: transparent;
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(210 40% 98% / 0.3);
+}
+
+#intro .buttons a.contactme:hover {
+  background-color: hsl(210 40% 98% / 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar navigation
+   -------------------------------------------------------------------------- */
+
+nav,
+ul.side-nav {
+  background-color: hsl(var(--sidebar-background));
+  box-shadow: none;
+}
+
+ul.side-nav.fixed {
+  border-right: 1px solid hsl(var(--sidebar-border));
+}
+
+ul.side-nav.fixed a,
+ul#slide-out li a {
+  color: hsl(var(--sidebar-foreground));
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: calc(var(--radius) - 2px);
+  margin: 0.125rem 0.5rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+ul.side-nav.fixed a:hover,
+ul#slide-out li a:hover {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+ul.side-nav.fixed a.active {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+ul.side-nav.fixed li.logo {
+  border-bottom: 1px solid hsl(var(--sidebar-border));
+}
+
+.profile-monogram {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile top bar */
+nav.trigger {
+  background-color: hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+nav .name-title #name {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Cards — shadcn card: 1px border, lg radius, subtle shadow
+   -------------------------------------------------------------------------- */
+
+.card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px 0 hsl(var(--foreground) / 0.05);
+  margin: 0 0 1.25rem;
+  transition: box-shadow 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px -2px hsl(var(--foreground) / 0.08);
+}
+
+.card .card-content {
+  padding: 1.5rem;
+}
+
+.card .card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+
+.card .card-content h4 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(var(--muted-foreground));
+  margin: 0 0 1rem;
+}
+
+.card .card-content ul li {
+  color: hsl(var(--foreground));
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.card .card-content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: hsl(var(--border));
+}
+
+.card .card-content ul ul li::before {
+  display: none;
+}
+
+.card .card-action {
+  border-top: 1px solid hsl(var(--border));
+  padding: 0.875rem 1.5rem;
+}
+
+.card .card-action span {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.card .role {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.75rem;
+}
+
+.card-reveal {
+  border-radius: var(--radius);
+}
+
+.card-reveal .card-title {
+  color: hsl(var(--foreground));
+}
+
+/* --------------------------------------------------------------------------
+   Badges (skills)
+   -------------------------------------------------------------------------- */
+
+.skill-chips .chip,
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  margin: 0 0.375rem 0.5rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Icon buttons
+   -------------------------------------------------------------------------- */
+
+.btn-floating {
+  background-color: hsl(var(--primary));
+  box-shadow: none;
+  transition: background-color 0.15s ease;
+}
+
+.btn-floating:hover {
+  background-color: hsl(var(--primary) / 0.9);
+  box-shadow: none;
+}
+
+.btn-floating i {
+  color: hsl(var(--primary-foreground));
+}
+
+.icon-btn {
+  background-color: hsl(210 40% 98% / 0.1);
+  border: 1px solid hsl(210 40% 98% / 0.2);
+  border-radius: calc(var(--radius) - 2px);
+  color: hsl(var(--primary-foreground));
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background-color: hsl(210 40% 98% / 0.2);
+}
+
+.hoverline:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+  #intro.section h2 {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .card .card-content {
+    padding: 1.25rem;
+  }
+}
