@@ -471,3 +471,42 @@ nav a.button-collapse i {
 #places .card-content p {
   margin: 0.4rem 0 0;
 }
+
+
+/* --------------------------------------------------------------------------
+   Load More button (Activity 5)
+   -------------------------------------------------------------------------- */
+
+.btn-load-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) - 2px);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-load-more:hover {
+  background-color: hsl(var(--muted));
+}
+
+.btn-load-more:focus-visible {
+  outline: 2px solid hsl(var(--brand));
+  outline-offset: 2px;
+}
+
+/* `display: inline-flex` above is an author rule and outranks the user-agent
+   `[hidden] { display: none }`, so setting el.hidden = true would not actually
+   hide the button. This restores that behaviour. */
+.btn-load-more[hidden] {
+  display: none;
+}

@@ -345,147 +345,21 @@
     <section id="projects" class="section scrollspy">
       <h3 class="page-title">Projects</h3>
       <div class="container">
-        <div class="row">
 
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Embedded reaction game on an STM32 microcontroller"
-                  src="/assets/img/futuristic-wallpaper.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator text-accent hoverline">Simon Says / Whack-a-Mole<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>Bare-metal embedded reaction game on an STM32F446</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title text-muted"><small>Simon Says / Whack-a-Mole</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> C, STM32F446, SDIO-DMA, I&sup2;S, PWM</li>
-                  <li>Event-driven game with eight capacitive-touch pads and PWM buzzers.</li>
-                  <li>44 kHz I&sup2;S WAV playback streaming at &asymp;500 kB/s from micro-SD over SDIO-DMA,
-                    after doubling throughput via clock-divider tuning.</li>
-                  <li>ADC-noise-seeded random-sequence logic and a menu state machine.</li>
-                  <li>Debugged timing with an oscilloscope and logic analyzer.</li>
-                  <li><b>Jan &ndash; Apr 2025</b></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <!-- Cards are rendered into this container by assets/js/projects.js -->
+        <div class="row" id="project-grid"></div>
 
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Code-breaking game running on a DE1-SoC board"
-                  src="/assets/img/javascript-coding-wallpaper-1.jpg" style="height: 100%; width: 100%"
-                  class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator text-accent hoverline">CodeBreaker Blitz<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>Interactive code-breaking game on the DE1-SoC</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title text-muted"><small>CodeBreaker Blitz</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> C, ARM assembly, DE1-SoC, Cyclone V FPGA</li>
-                  <li>Ran across the board's ARM HPS and FPGA fabric.</li>
-                  <li>640 &times; 480 VGA pipeline at 60 fps with &lt; 5 ms input latency using
-                    double-buffering.</li>
-                  <li><b>Jan &ndash; Apr 2024</b></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Four-layer RF mixer PCB for a software-defined radio"
-                  src="/assets/img/minimal-ai-wallpaper.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator text-accent hoverline">SDR PCB Subsystem<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>Four-layer RF mixer front-end board in Altium</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title text-muted"><small>SDR PCB Subsystem</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Altium Designer, schematic capture, DRC</li>
-                  <li>Co-designed a 75 &times; 45 mm four-layer RF mixer front-end for a student
-                    software-defined radio.</li>
-                  <li>Passed 100% DRC and continuity checks on the first spin.</li>
-                  <li><b>Jan &ndash; Apr 2024</b></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="FPGA lunar lander game written in Verilog" src="/assets/img/ai-wallpaper-1.jpg"
-                  style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator text-accent hoverline">MoonLanders<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>Verilog FPGA game synthesized at 50 MHz</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title text-muted"><small>MoonLanders</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Verilog, Quartus Prime, Cyclone V FPGA</li>
-                  <li>8-state finite-state machine synthesized to 50 MHz.</li>
-                  <li>Integrated VGA timing, PS/2 keyboard input and real-time collision logic for
-                    glitch-free gameplay.</li>
-                  <li><b>Sep &ndash; Dec 2023</b></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="This personal portfolio website" src="/assets/img/eat-sleep-code-repeat-wallpaper.jpg"
-                  style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator text-accent hoverline">Personal Portfolio Site<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>This website &mdash; static, no build step, deployed on GitHub Pages</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title text-muted"><small>Personal Portfolio Site</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML5, CSS3, JavaScript, Materialize, GitHub Pages</li>
-                  <li>Built for ECE444 Software Engineering (PRA2, Front End Design).</li>
-                  <li>Continuously deployed &mdash; every push to <code>main</code> republishes the site.</li>
-                  <li><b>Sep 2026</b></li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="View this site" href="https://sheruberu.github.io" target="_blank" rel="noopener"
-                    data-position="top" data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="View the GitHub repo for this site"
-                    href="https://github.com/sheruberu/sheruberu.github.io" target="_blank" rel="noopener"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="center-align">
+          <button type="button" id="load-more-projects" class="btn-load-more">Load More</button>
         </div>
+
+        <noscript>
+          <p class="flow-text">
+            This section is rendered with JavaScript. With JavaScript disabled, the same
+            projects are listed in the <a href="#resume">Resume</a> section below.
+          </p>
+        </noscript>
+
       </div>
     </section>
 
@@ -813,6 +687,9 @@
       })
     })
   </script>
+
+  <!-- Activity 5: dynamic project rendering -->
+  <script src="/assets/js/projects.js"></script>
 </body>
 
 </html>
