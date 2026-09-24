@@ -292,11 +292,35 @@ nav a.button-collapse i {
   padding: 1.5rem;
 }
 
+/* Materialize sets `.card .card-title { color: #fff }` because its own cards
+   overlay the title on the image. Ours sit on a white card surface, so the
+   titles were rendering white-on-white and were invisible. `.text-accent` on
+   the element could not win either: (0,1,0) loses to (0,2,0). */
 .card .card-title {
+  color: hsl(var(--card-foreground));
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.3;
+}
+
+.card .card-title.text-accent,
+.card .card-title .text-accent {
+  color: hsl(var(--brand));
+}
+
+.card .card-reveal .card-title,
+.card .card-reveal .card-title small {
+  color: hsl(var(--muted-foreground));
+}
+
+/* Materialize also forces links inside cards to amber (#ffab40) */
+.card a {
+  color: hsl(var(--brand));
+}
+
+.card a:hover {
+  color: hsl(var(--brand) / 0.8);
 }
 
 .card .card-content h4 {
